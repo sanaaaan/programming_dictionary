@@ -1,0 +1,28 @@
+<h1>用語編集</h1>
+
+<%= form_with model: @programming_term do |form| %>
+  <div>
+    <%= form.label :term, "用語" %>
+    <%= form.text_field :term %>
+  </div>
+
+  <div>
+    <%= form.label :meaning, "意味" %>
+    <%= form.text_area :meaning %>
+  </div>
+
+  <div>
+    <%= form.label :example, "使用例" %>
+    <%= form.text_area :example %>
+  </div>
+
+  <div>
+    <%= form.label :category, "カテゴリ" %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "更新" %>
+  </div>
+
+<% end %>

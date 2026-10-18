@@ -1,4 +1,12 @@
 <h1>用語詳細</h1>
 
 <h2><%= @programming_term.term %></h2>
-<p><%= @programming_term.meaning %></p>
+<p>意味: <%= @programming_term.meaning %></p>
+<p>使用例: <%= @programming_term.example %></p>
+<p>カテゴリ: <%= @programming_term.category %></p>
+
+<%= link_to "編集", edit_programming_term_path(@programming_term) %>
+<%= button_to "削除", programming_term_path(@programming_term), method: :delete,data: { turbo_confirm: "本当に削除しますか？" } %>
+
+<%= link_to "一覧に戻る", programming_terms_path %>
+

@@ -1,9 +1,13 @@
-<h1>プログラミング用語辞典</h1>
+<h1>プログラミング用語一覧</h1>
 
+<%= link_to "新規作成", new_programming_term_path %>
 <ul>
   <% @programming_terms.each do |term| %>
     <li>
       <strong><%= term.term %></strong> : <%= term.meaning %>
+
+      <%= link_to "詳細", programming_term_path(term) %>
     </li>
   <% end %>
 </ul>
+
